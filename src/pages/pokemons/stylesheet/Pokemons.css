@@ -9,11 +9,38 @@
   gap: 16px;
 }
 
+.pokemons-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .pokemons-title {
   font-size: 1.2rem;
 }
 
+.pokemons-btn {
+  width: 20px;
+  height: 20px;
+
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+
+  cursor: pointer;
+}
+
+.pokemons-btn:hover {
+  background-color: var(--blue-op);
+}
+
+.pokemons-table-wrapper {
+  display: flex;
+}
+
 .pokemons-table {
+  flex: 1 0 auto;
   border-collapse: collapse;
 }
  
@@ -22,4 +49,11 @@
   padding: 8px 16px;
 
   border-bottom: solid 1px var(--secundary-color);
+}
+
+.pokemons-table th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }

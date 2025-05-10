@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useReactTable, getCoreRowModel, flexRender, getPaginationRowModel } from "@tanstack/react-table";
+import { IconEye, IconPencil, IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import FormDoctor from "@/pages/doctors/FormDoctor";
 import DoctorDetail from "@/pages/doctors/DoctorDetail";
 import columnsDoctors from "@/utils/doctorsColums";
@@ -72,55 +73,61 @@ const Doctors = () => {
               <button className="doctors-table-btn_pagination"
                       onClick={() => table.previousPage()}
                       disabled={!table.getCanPreviousPage()}>
-                {'<'}
+                <IconChevronLeft size={20} stroke={1.2} />
               </button>
               <span>{table.getState().pagination.pageIndex + 1}</span>
               <button className="doctors-table-btn_pagination"
                       onClick={() => table.nextPage()}
                       disabled={!table.getCanNextPage()}>
-                {'>'}
+                <IconChevronRight size={20} stroke={1.2} />
               </button>
             </span>
           </article>
         
-          <table className="doctors-table">
-            <thead>
-              {table.getHeaderGroups().map((headerGroup) => (
-                <tr key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => (
-                    <th key={header.id}>
-                      {flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                      )}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map((row) => (
-                <tr key={row.id}>
-                  {row.getVisibleCells().map((cell) => (
-                    <td key={cell.id}>
-                      {cell.column.id === 'estado' ? 
-                        <article className="doctors-table-state_col">
-                          <span className={`doctors-table-state_${cell.getValue() === 'Activo' ? 'active' : 'inactive'}`}>
-                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                          </span>
-                          <span className='doctors-table-btns'>
-                            <button className='doctors-table-btn' onClick = {() => handleViewDoctor(row.original.id)}>V</button>
-                            <button className='doctors-table-btn' onClick = {() => handleEditDoctor(row.original.id)}>E</button>
-                          </span>
-                        </article> : 
-                        flexRender(cell.column.columnDef.cell, cell.getContext())
-                      }
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <article className="doctors-table-wrapper">
+            <table className="doctors-table">
+              <thead>
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <tr key={headerGroup.id}>
+                    {headerGroup.headers.map((header) => (
+                      <th key={header.id}>
+                        {flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                        )}
+                      </th>
+                    ))}
+                  </tr>
+                ))}
+              </thead>
+              <tbody>
+                {table.getRowModel().rows.map((row) => (
+                  <tr key={row.id}>
+                    {row.getVisibleCells().map((cell) => (
+                      <td key={cell.id}>
+                        {cell.column.id === 'estado' ? 
+                          <article className="doctors-table-state_col">
+                            <span className={`doctors-table-state_${cell.getValue() === 'Activo' ? 'active' : 'inactive'}`}>
+                              {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                            </span>
+                            <span className='doctors-table-btns'>
+                              <button className='doctors-table-btn' onClick = {() => handleViewDoctor(row.original.id)}>
+                                <IconEye size={20} stroke={1.2} />
+                              </button>
+                              <button className='doctors-table-btn' onClick = {() => handleEditDoctor(row.original.id)}>
+                                <IconPencil size={20} stroke={1.2} />
+                              </button>
+                            </span>
+                          </article> : 
+                          flexRender(cell.column.columnDef.cell, cell.getContext())
+                        }
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </article>
         </>}
 
         {activateForm && <>

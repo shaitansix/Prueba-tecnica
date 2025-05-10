@@ -121,11 +121,11 @@ const FormDoctor = ({ doctors, setDoctors, setActivateForm, data = null }) => {
                         onChange={handleChange} />
 
                     <label htmlFor="estado">Estado</label>
-                    <input className='formdoctor-input' 
-                        name='estado' 
-                        type="text" 
-                        value={newDoctor.estado} 
-                        onChange={handleChange} />
+                    <select className='formdoctor-input' name="estado" id="estado" defaultValue={newDoctor.estado} onChange={handleChange}>
+                        <option value=""></option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
 
                     <span className='formdoctor-btns'>
                         <button className='formdoctor-btn' onClick={data ? handleEdit : handleAdd}>

@@ -1,3 +1,4 @@
+import { IconMenu2 } from '@tabler/icons-react'
 import "./stylesheet/Navbar.css";
 
 const Navbar = ({ showSidebar, setShowSidebar }) => {
@@ -9,7 +10,7 @@ const Navbar = ({ showSidebar, setShowSidebar }) => {
     <nav className="navbar-wrapper">
       <div className="navbar-container">
         <button className="navbar-btn" onClick={handleSidebar}>
-          <span>=</span>
+          <IconMenu2 size={30} stroke={1.2} />
         </button>
       </div>
     </nav>

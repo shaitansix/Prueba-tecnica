@@ -71,7 +71,13 @@
   cursor: default;
 }
 
+.doctors-table-wrapper {
+  display: flex;
+  overflow: auto;
+}
+
 .doctors-table {
+  flex: 1 0 auto;
   border-collapse: collapse;
 }
  
