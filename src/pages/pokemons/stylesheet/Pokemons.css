@@ -1,3 +1,25 @@
 .pokemons-wrapper {
   flex: 1 1 auto;
+  padding: 20px;
+}
+
+.pokemons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pokemons-title {
+  font-size: 1.2rem;
+}
+
+.pokemons-table {
+  border-collapse: collapse;
+}
+ 
+.pokemons-table th, 
+.pokemons-table td {
+  padding: 8px 16px;
+
+  border-bottom: solid 1px var(--secundary-color);
 }
