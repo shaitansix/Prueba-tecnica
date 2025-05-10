@@ -1,0 +1,28 @@
+.navbar-wrapper {
+  padding: 12px 24px;
+
+  border-bottom: solid 1px var(--primary-color);
+  background-color: var(--white);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-btn {
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--blue-op);
+  color: var(--blue);
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.3);
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}

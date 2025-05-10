@@ -1,0 +1,15 @@
+.layout-wrapper {
+  height: 100vh;
+}
+
+.layout-container {
+  display: flex;
+}
+
+.layout-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+}

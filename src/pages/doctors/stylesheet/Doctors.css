@@ -1,0 +1,30 @@
+.doctors-wrapper {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+.doctors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doctors-header {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.2rem;
+}
+
+.doctors-btn {
+  padding: 8px 16px;
+
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 0.8rem;
+
+  cursor: pointer;
+}

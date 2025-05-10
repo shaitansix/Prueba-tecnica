@@ -1,0 +1,7 @@
+.footer-wrapper {
+  padding: 12px;
+
+  border-top: solid 1px var(--primary-color);
+  background-color: var(--white);
+  color: var(--secundary-color);
+}

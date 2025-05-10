@@ -1,0 +1,30 @@
+.sidebar-wrapper {
+  padding: 8px 16px;
+  height: calc(100vh - 16px);
+
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-title {
+  font-size: 1.6rem;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 200px;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: var(--white);
+}
