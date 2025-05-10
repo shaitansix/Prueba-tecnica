@@ -5,12 +5,10 @@
   background-color: var(--white);
 }
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .navbar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
   width: 36px;
   height: 36px;

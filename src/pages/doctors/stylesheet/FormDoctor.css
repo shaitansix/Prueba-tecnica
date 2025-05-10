@@ -1,0 +1,70 @@
+.formdoctor-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.formdoctor-form-wrapper {
+    max-height: 600px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.formdoctor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    width: 400px;
+    
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+.formdoctor-input {
+    padding: 8px 16px;
+    
+    border-radius: 4px;
+    border: solid 1px var(--primary-color);
+    background-color: transparent;
+}
+
+.formdoctor-input:focus {
+    outline: none;
+}
+
+.formdoctor-btns {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+} 
+
+.formdoctor-btn, 
+.formdoctor-btn_delete {
+    padding: 8px 16px;
+    width: fit-content;
+    
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+
+    cursor: pointer;
+}
+
+.formdoctor-btn {
+    background-color: var(--blue);
+}
+
+.formdoctor-btn_delete {
+    background-color: var(--red);
+}

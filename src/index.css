@@ -1,13 +1,14 @@
 :root {
   --primary-color: hsl(210, 40%, 10%);
-  --secundary-color: hsl(0, 0%, 70%);
+  --secundary-color: hsl(0, 0%, 60%);
 
   --blue: hsl(210, 60%, 60%);
-  --blue-op: hsla(210, 60%, 60%, 0.2);
+  --blue-op: hsla(210, 60%, 60%, 0.3);
 
-  --green: hsl(150, 60%, 60%);
-  --green-op: hsla(150, 60%, 60%, 0.2);
-
+  --green: hsl(140, 70%, 40%);
+  --green-op: hsla(140, 70%, 40%, 0.3);
+  --red: hsl(0, 70%, 40%);
+  --red-op: hsla(0, 70%, 40%, 0.3);
   --white: hsl(0, 0%, 90%);
 }
 

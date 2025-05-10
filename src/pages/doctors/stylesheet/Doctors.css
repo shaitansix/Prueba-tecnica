@@ -28,3 +28,102 @@
 
   cursor: pointer;
 }
+
+.doctors-table-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.doctors-table-header select {
+  width: 120px;
+
+  border-radius: 4px;
+  border: solid 1px var(--primary-color);
+}
+
+.doctors-table-header select:focus {
+  outline: none;
+  border: solid 1px var(--primary-color);
+}
+
+.doctors-table-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.doctors-table-btn_pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+
+  outline: none;
+  border-radius: 4px;
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.doctors-table-btn_pagination:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.doctors-table {
+  border-collapse: collapse;
+}
+ 
+.doctors-table th, 
+.doctors-table td {
+  padding: 8px 16px;
+
+  border-bottom: solid 1px var(--secundary-color);
+}
+
+.doctors-table-state_col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+
+  box-sizing: border-box;
+}
+
+.doctors-table-state_active {
+  padding: 4px 8px;
+
+  border-radius: 4px;
+  background-color: var(--green-op);
+  color: var(--green);
+}
+
+.doctors-table-state_inactive {
+  padding: 4px 8px;
+  
+  border-radius: 4px;
+  background-color: var(--red-op);
+  color: var(--red);
+}
+
+.doctors-table-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.doctors-table-btn {
+  width: 20px;
+  height: 20px;
+
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+
+  cursor: pointer;
+}
+
+.doctors-table-btn:hover {
+  background-color: var(--blue-op);
+}
